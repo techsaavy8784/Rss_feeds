@@ -3,7 +3,7 @@ import { GeneralFeedUrls, NewsArticle } from "./constant";
 
 const parser = new RSSParser();
 
-async function getNewsArticles(
+async function getGeneralNewsArticles(
   feedUrls: Array<{ url: string }>
 ): Promise<NewsArticle[]> {
   try {
@@ -19,21 +19,21 @@ async function getNewsArticles(
     );
     return allArticles.flat();
   } catch (error) {
-    console.error("Error fetching news articles:", error);
+    console.error("Error fetching generalNews articles:", error);
     return [];
   }
 }
 
-async function fetchAndDisplayNewsArticles() {
+async function fetchAndDisplayGeneralNewsArticles() {
   try {
-    const articles = await getNewsArticles(GeneralFeedUrls);
+    const articles = await getGeneralNewsArticles(GeneralFeedUrls);
     articles.forEach((article: NewsArticle) => {
       console.log(article);
       return article;
     });
   } catch (error) {
-    console.error("Error fetching news articles:", error);
+    console.error("Error fetching generalNews articles:", error);
   }
 }
 
-fetchAndDisplayNewsArticles();
+fetchAndDisplayGeneralNewsArticles();
