@@ -1,5 +1,4 @@
 export const GeneralFeedUrls: Array<{ url: string }> = [
-  // { url: "https://cointelegraph.com/feed" },
   { url: "https://www.coindesk.com/arc/outboundfeeds/rss/" },
   { url: "https://coingape.com/feed/" },
   { url: "https://blockworks.co/feed" },
@@ -9,10 +8,10 @@ export const GeneralFeedUrls: Array<{ url: string }> = [
 ];
 
 export const DefiFeedUrls: Array<{ url: string }> = [
-  { url: "https://dezentralizedfinance.com/defi-news-feed/feed/" },
+  { url: "https://dezentralizedfinance.com/feed/" },
   { url: "https://thedefiant.io/api/feed" },
-  { url: "https://cryptoslate.com/defi/feed/" },
-  { url: "https://cointelegraph.com/rss/tag/defi" },
+  { url: "https://dappradar.com/blog/feed" },
+  { url: "https://blog.synthetix.io/rss/" },
   { url: "https://coingape.com/category/news/defi-news/feed/" },
 ];
 

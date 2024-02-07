@@ -1,9 +1,9 @@
 import RSSParser from "rss-parser";
-import { GeneralFeedUrls, NewsArticle } from "./constant";
+import { DefiFeedUrls, GeneralFeedUrls, NewsArticle } from "./constant";
 
 const parser = new RSSParser();
 
-async function getGeneralNewsArticles(
+async function getNewsArticles(
   feedUrls: Array<{ url: string }>
 ): Promise<NewsArticle[]> {
   try {
@@ -26,10 +26,10 @@ async function getGeneralNewsArticles(
 
 async function fetchAndDisplayGeneralNewsArticles() {
   try {
-    const articles = await getGeneralNewsArticles(GeneralFeedUrls);
-    articles.forEach((article: NewsArticle) => {
-      console.log(article);
-      return article;
+    const generalNewsarticles = await getNewsArticles(GeneralFeedUrls);
+    generalNewsarticles.forEach((generalNewsarticle: NewsArticle) => {
+      console.log(generalNewsarticle);
+      return generalNewsarticle;
     });
   } catch (error) {
     console.error("Error fetching generalNews articles:", error);
